@@ -1,0 +1,117 @@
+*nind.txt*	Adjusting the cursor in the indented position.
+
+Version: 1.0.0
+Author : thinca <thinca+vim@gmail.com>
+License: zlib License
+
+==============================================================================
+CONTENTS					*nind-contents*
+
+INTRODUCTION			|nind-introduction|
+USAGE				|nind-usage|
+INTERFACE			|nind-interface|
+  COMMANDS			  |nind-commands|
+  FUNCTIONS			  |nind-functions|
+  KEY MAPPINGS			  |nind-key-mappings|
+CUSTOMIZING			|nind-customizing|
+CHANGELOG			|nind-changelog|
+
+
+
+==============================================================================
+INTRODUCTION					*nind-introduction*
+
+*nind.vim* is a Vim plugin for adjusting the cursor in the indented position.
+
+When you move the cursor to the indented position, the cursor automatically
+moved to first non-blank character of the line.
+This works only |Normal-mode|.
+
+
+Requirements:
+- Vim 8.2 or later
+
+Latest version:
+https://github.com/thinca/vim-nind
+
+
+
+==============================================================================
+USAGE						*nind-usage*
+
+
+
+
+
+==============================================================================
+INTERFACE					*nind-interface*
+
+------------------------------------------------------------------------------
+COMMANDS					*nind-commands*
+
+:NindEnable [{scope}]				*:NindEnable*
+	Enables this plugin at {scope}.
+	See |nind-scope| about {scope}.
+
+:NindDisable [{scope}]				*:NindDisable*
+	Disables this plugin at {scope}.
+	See |nind-scope| about {scope}.
+
+:NindToggle [{scope}]				*:NindToggle*
+	Toggles this plugin at {scope}.
+	See |nind-scope| about {scope}.
+
+:NindReset {scope}				*:NindReset*
+	Resets the scoped specification.
+	See |nind-scope| about {scope}.
+	Cannot specify "global" for {scope}.
+
+
+------------------------------------------------------------------------------
+FUNCTIONS					*nind-functions*
+
+nind#is_enabled([{winid}])			*nind#is_enabled()*
+	Returns |TRUE| if this plugin is enabled on the target window.
+	Target window is {winid} if it is specified, or current window.
+	Returns |FALSE| if the window of {winid} not exist.
+
+
+
+==============================================================================
+CUSTOMIZING					*nind-customizing*
+
+g:nind#enable					*g:nind#enable*
+	Boolean.  If |TRUE|, plugin is enabled.
+
+b:nind_enable					*b:nind_enable*
+	Boolean.  If this exists, plugin is enabled/disabled for this buffer.
+
+t:nind_enable					*t:nind_enable*
+	Boolean.  If this exists, plugin is enabled/disabled for this tabpage.
+
+w:nind_enable					*w:nind_enable*
+	Boolean.  If this exists, plugin is enabled/disabled for this window.
+
+
+------------------------------------------------------------------------------
+SCOPE						*nind-scope*
+
+This plugin can switch the feature is enabled/disabled for each
+window/tabpage/buffer.
+The argument {scope} of each Ex commands is one of "window", "tabpage",
+"buffer", "global".
+If ommited, "global" is used.
+These Ex commands just set customizing variable.
+The order of priority is "window", "tabpage", "buffer", "global".
+
+
+
+==============================================================================
+CHANGELOG					*nind-changelog*
+
+1.0.0	2020-10-05
+	- Initial version.
+
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl
