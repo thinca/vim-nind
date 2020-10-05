@@ -19,7 +19,7 @@ function nind#adjust() abort
     return
   endif
 
-  let indent = indent('.')
+  let indent = len(matchstr(line, '^\s*'))
   if current_cursor[2] <= indent
     let current_cursor[4] = current_cursor[2]
     let current_cursor[2] = indent + 1
