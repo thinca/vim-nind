@@ -10,7 +10,7 @@ First, see [Code of Conduct](./CODE_OF_CONDUCT.md).
 There are some templates.
 Please choose a template and fill them.
 
-When you can not find an appropriate template, you do not have to use it.
+When you cannot find an appropriate template, you do not have to use it.
 
 
 ### About `question`
@@ -54,5 +54,5 @@ You can use force pushing freely.  GitHub shows a link to see the difference bet
 ## About Neovim
 
 My plugin does not support Neovim.  And, there are no plans to include codes for supporting Neovim.
-Because I do not use Neovim, so I can not keep the codes working on Neovim.
+Because I do not use Neovim, so I cannot keep the codes working on Neovim.
 Sorry.

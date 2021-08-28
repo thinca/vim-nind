@@ -100,7 +100,7 @@ This plugin can switch the feature is enabled/disabled for each
 window/tabpage/buffer.
 The argument {scope} of each Ex commands is one of "window", "tabpage",
 "buffer", "global".
-If ommited, "global" is used.
+If omitted, "global" is used.
 These Ex commands just set customizing variable.
 The order of priority is "window", "tabpage", "buffer", "global".
 
